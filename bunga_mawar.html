@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunga Mawar Bergerak</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: lightblue;
+            margin: 0;
+        }
+
+        .flower {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            animation: sway 2s infinite;
+        }
+
+        @keyframes sway {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .petal {
+            position: absolute;
+            width: 100px;
+            height: 200px;
+            background: pink;
+            border-radius: 50% 50% 0 0;
+            transform-origin: bottom center;
+        }
+
+        .petal:nth-child(1) { transform: rotate(-15deg); }
+        .petal:nth-child(2) { transform: rotate(0deg); }
+        .petal:nth-child(3) { transform: rotate(15deg); }
+        .petal:nth-child(4) { transform: rotate(30deg); }
+        .petal:nth-child(5) { transform: rotate(45deg); }
+        .petal:nth-child(6) { transform: rotate(60deg); }
+        .petal:nth-child(7) { transform: rotate(75deg); }
+        .petal:nth-child(8) { transform: rotate(90deg); }
+        .petal:nth-child(9) { transform: rotate(105deg); }
+        .petal:nth-child(10) { transform: rotate(120deg); }
+        .petal:nth-child(11) { transform: rotate(135deg); }
+        .petal:nth-child(12) { transform: rotate(150deg); }
+
+        .stem {
+            width: 10px;
+            height: 150px;
+            background: green;
+            margin: auto;
+            margin-top: -20px;
+            position: relative;
+            animation: sway 2s infinite;
+        }
+
+        .leaf {
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            background: lightgreen;
+            border-radius: 50%;
+            transform-origin: bottom center;
+            animation: sway 2s infinite;
+        }
+
+        .leaf-left {
+            transform: rotate(-45deg);
+            left: -30px;
+            top: 50px;
+        }
+
+        .leaf-right {
+            transform: rotate(45deg);
+            right: -30px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+    </div>
+    <div class="stem"></div>
+    <div class="leaf leaf-left"></div>
+    <div class="leaf leaf-right"></div>
+</body>
+</html>
